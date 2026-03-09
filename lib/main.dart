@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'styles.dart' as lib;
+
 
 void main() {
   runApp(const MainApp());
@@ -24,12 +24,37 @@ class AppContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(height: 100,width: 100, color: Colors.yellow, child: Center(child: Text("1", style: lib.AppTextStyles().verdanaBold24 ,))),
-        Container(height: 100, width:100,color:  Colors.red, child: Center(child: Text("2",style: lib.AppTextStyles().verdanaBold24))),
-        Container(height: 100, width:100,color: Colors.green, child: Center(child: Text("3",style: lib.AppTextStyles().verdanaBold24))),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(100),
+      child: Column(
+        children: [
+          Center(
+            child: SizedBox(
+              width: 100,
+              height: 100,
+              //color: Colors.yellow,
+              child: Image.asset("assets/images/play.png"),
+            ),
+          ),
+          Center(
+            child: SizedBox(
+              width: 100,
+              height: 100,
+              //color: Colors.yellow,
+              child: Image.asset("assets/images/pauze.png"),
+            ),
+          ),
+          Center(
+            child: SizedBox(
+              width: 100,
+              height: 100,
+              //color: Colors.yellow,
+              child: Image.asset("assets/images/stop.png"),
+            ),
+          ),
+      
+        ],
+      ),
     );
   }
 }
