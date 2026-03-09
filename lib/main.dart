@@ -23,47 +23,32 @@ class AppContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-        children: [
-          Row(
+    return ListView(
+       scrollDirection: Axis.horizontal,
+       children: [
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                width: 100,
-                height: 100,
-                padding: EdgeInsets.only(right: 10),
-                child: Image.asset("assets/images/play.png"),
-              ),
-              Expanded(child: Text("Play")),
+              
+              DecoratedBox(
+               decoration: BoxDecoration(shape: BoxShape.circle),
+               child: Image.asset("assets/images.play.png",width: 60,height: 60,) 
+               ),
+              DecoratedBox(
+               decoration: BoxDecoration(shape: BoxShape.circle),
+               child: Image.asset("assets/images.pauze.png",width: 60,height: 60,) 
+               ),
+               DecoratedBox(
+               decoration: BoxDecoration(shape: BoxShape.circle),
+               child: Image.asset("assets/images.stop.png",width: 60,height: 60,) 
+               ),
+             
             ],
           ),
-          Row(
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                padding: EdgeInsets.only(right: 10),
-                child: Image.asset("assets/images/pauze.png"),
-              ),
-              Expanded(child: Text("Pauze")),
-            ],
-          ),
-          Row(
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                padding: EdgeInsets.only(right: 10),
-                child: Image.asset("assets/images/stop.png"),
-              ),
-              Expanded(child: Text("Stop")),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+        )
+       ],
+       
+         ) ;}
 }
