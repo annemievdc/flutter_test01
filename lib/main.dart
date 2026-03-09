@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const MainApp());
 }
@@ -25,34 +24,44 @@ class AppContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(100),
+      padding: const EdgeInsets.all(10.0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
         children: [
-          Center(
-            child: SizedBox(
-              width: 100,
-              height: 100,
-              //color: Colors.yellow,
-              child: Image.asset("assets/images/play.png"),
-            ),
+          Row(
+            children: [
+              Container(
+                width: 100,
+                height: 100,
+                padding: EdgeInsets.only(right: 10),
+                child: Image.asset("assets/images/play.png"),
+              ),
+              Expanded(child: Text("Play")),
+            ],
           ),
-          Center(
-            child: SizedBox(
-              width: 100,
-              height: 100,
-              //color: Colors.yellow,
-              child: Image.asset("assets/images/pauze.png"),
-            ),
+          Row(
+            children: [
+              Container(
+                width: 100,
+                height: 100,
+                padding: EdgeInsets.only(right: 10),
+                child: Image.asset("assets/images/pauze.png"),
+              ),
+              Expanded(child: Text("Pauze")),
+            ],
           ),
-          Center(
-            child: SizedBox(
-              width: 100,
-              height: 100,
-              //color: Colors.yellow,
-              child: Image.asset("assets/images/stop.png"),
-            ),
+          Row(
+            children: [
+              Container(
+                width: 100,
+                height: 100,
+                padding: EdgeInsets.only(right: 10),
+                child: Image.asset("assets/images/stop.png"),
+              ),
+              Expanded(child: Text("Stop")),
+            ],
           ),
-      
         ],
       ),
     );
